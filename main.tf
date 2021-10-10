@@ -7,7 +7,7 @@ provider "newrelic" {
 
 # SCRIPTED BROWSER MONITOR CREATION
 resource "newrelic_synthetics_monitor" "tf_scripted" {
-  name = "My Github Actions Created Script"
+  name = "asaf's scripted monitor"
   type = "SCRIPT_BROWSER"
   frequency = 1
   status = "ENABLED"
