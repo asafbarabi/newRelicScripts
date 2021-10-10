@@ -2,16 +2,16 @@
 provider "newrelic" {
   api_key       =  "NRAK-H5UEUYD42A81NL8EGYUPEQKVEQY"
   account_id    =  2690548
-  region        =  "EU" 
+  region        =  "US" 
 }
 
 # SCRIPTED BROWSER MONITOR CREATION
 resource "newrelic_synthetics_monitor" "tf_scripted" {
-  name = "asaf's scripted monitor"
-  type = "SCRIPT_BROWSER"
+  name = "ex-asaf-barabi-new-terraform"
+  type = "SCRIPT_API"
   frequency = 1
   status = "ENABLED"
-  locations = ["AWS_EU_WEST_1"]
+  locations = ["2690548-ccp_prod-B1E"]
 }
 
 data "template_file" "BrowserScript" {
